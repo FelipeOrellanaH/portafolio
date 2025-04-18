@@ -14,8 +14,7 @@
         <!-- Tu hoja de estilos personalizada -->
         <link rel="stylesheet" href="style.css" />
       </head>
-
-<body>
+<body class="custom-bg text-white">
 
   <!-- Contenedor principal con padding vertical -->
   <div class="container py-5">
@@ -25,24 +24,38 @@
       <!-- Imagen de perfil (puedes cambiar el src por tu imagen real) -->
       <img src="images/caracv.jpg" alt="Foto de perfil" class="profile-img mb-3">
       <h1 class="fw-bold">Felipe Ignacio Orellana Henríquez</h1>
-      <p class="lead">Desarrollador Web | Estudiante de Ingeniería de Ejecución Informática. | Apasionado por la tecnología</p>
+      <p class="lead">Desarrollador Web | Ingeniero Informático. | Apasionado por la tecnología</p>
     </div>
 
     <!-- Fila para información de contacto -->
-    <div class="row mb-5">
+     
+    <div class="row mb-5 g-4 d-flex justify-content-between">
       <!-- Columna para email -->
-      <div class="col-md-4 text-center">
-        <p><strong>Email:</strong> felipe.orellana.henriquez@gmail.com</p>
+      <div class=" text-center glass-card col-md-3">
+        <img src="images/gmail_logo.png" class="card-img-top mx-auto mt-3" alt="Logo gmail" style="width: 40px; height: 40px;">
+        <p><strong>Email:</strong> 
+         
+         
+          <a href="mailto:felipe.orellana.henriquez@gmail.com" target="_blank" class="link-blanco">
+            felipe.orellana.henriquez@gmail.com
+          </a>
+       
+       
+       
+        </p>
       </div>
 
       <!-- Columna para teléfono -->
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 text-center glass-card">
+        <img src="images/logo_telefono.png" class="card-img-top mx-auto mt-3" alt="Logo telefono" style="width: 40px; height: 40px;">
         <p><strong>Teléfono:</strong> +56 9 765 943 87</p>
       </div>
 
       <!-- Columna para enlace a GitHub -->
-      <div class="col-md-4 text-center">
-        <p><strong>GitHub:</strong> <a href="https://github.com/FelipeOrellanah" target="_blank">FelipeOrellanah</a></p>
+      <div class="col-md-4 text-center glass-card">
+        <img src="images/portafolio_logo.png" class="card-img-top mx-auto mt-3" alt="Logo portafolio" style="width: 40px; height: 40px;">
+        <p><strong>GitHub:</strong>
+           <a href="https://github.com/FelipeOrellanah" target="_blank" class="link-blanco">FelipeOrellanah</a></p>
       </div>
     </div>
 
@@ -53,7 +66,7 @@
    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
     <!-- Tarjeta de HTML -->
     <div class="col">
-      <div class="card h-100 text-center">
+      <div class="card h-100 text-center glass-card">
         <img src="images/logo_html.png" class="card-img-top mx-auto mt-3" alt="Logo HTML" style="width: 80px; height: 80px;">
         <div class="card-body">
           <h5 class="card-title">HTML</h5>
@@ -62,7 +75,7 @@
     </div>
     <!-- Tarjeta de CSS -->
     <div class="col">
-      <div class="card h-100 text-center">
+      <div class="card h-100 text-center glass-card">
         <img src="images/logo_css.png" class="card-img-top mx-auto mt-3" alt="Logo CSS" style="width: 80px; height: 80px;">
         <div class="card-body">
           <h5 class="card-title">CSS</h5>
@@ -71,7 +84,7 @@
     </div>
     <!-- Tarjeta de Java -->
     <div class="col">
-      <div class="card h-100 text-center">
+      <div class="card h-100 text-center glass-card">
         <img src="images/logo_javascript.png" class="card-img-top mx-auto mt-3" alt="Logo Java" style="width: 80px; height: 80px;">
         <div class="card-body">
           <h5 class="card-title">JavaScript</h5>
@@ -80,7 +93,7 @@
     </div>
     <!-- Tarjeta de MySQL -->
     <div class="col">
-      <div class="card h-100 text-center">
+      <div class="card h-100 text-center glass-card">
         <img src="images/mysql_logo.png" class="card-img-top mx-auto mt-3" alt="Logo MySQL" style="width: 80px; height: 80px;">
         <div class="card-body">
           <h5 class="card-title">MySQL</h5>
@@ -89,7 +102,7 @@
     </div>
     <!-- Tarjeta de Bootstrap -->
     <div class="col">
-      <div class="card h-100 text-center">
+      <div class="card h-100 text-center glass-card">
         <img src="images/bootstrap_logo.png" class="card-img-top mx-auto mt-3" alt="Logo Bootstrap" style="width: 80px; height: 80px;">
         <div class="card-body">
           <h5 class="card-title">Bootstrap</h5>
@@ -98,7 +111,7 @@
     </div>
     <!-- Tarjeta de GitHub -->
     <div class="col">
-      <div class="card h-100 text-center">
+     <div class="card h-100 text-center glass-card">
         <img src="images/logo_github.png" class="card-img-top mx-auto mt-3" alt="Logo GitHub" style="width: 80px; height: 80px;">
         <div class="card-body">
           <h5 class="card-title">GitHub</h5>
@@ -112,25 +125,27 @@
     <!-- Sección de educación -->
     <div class="mb-4">
       <div class="col">
-        <div class="card h-100 text-center">
-          <h2 class="section-title">Educación</h2>
-          <p><strong>Ingeniería de Ejecución Informática</strong> – Pontificia Universidad Católica de Valparaíso, 2015 – 2019</p>
-          <img src="images/logo_pucv.png" class="card-img-top mx-auto mt-3 mb-3" alt="Logo GitHub" style="width: 300px; height: 100px; ">
-        </div>
+          <h2 class="section-title text-center">Educación</h2>
+           <div class="text-center glass-card">
+            <p><strong>Ingeniería de Ejecución Informática</strong> – Pontificia Universidad Católica de Valparaíso, 2015 – 2019</p>
+            <img src="images/logo_pucv.png" class="card-img-top mx-auto mt-3 mb-3" alt="Logo GitHub" style="width: 300px; height: 100px; ">
+          </div>
         </div>
       </div>
 
     <!-- Sección de experiencia -->
     <div class="mb-4">
       <h2 class="section-title text-center">Experiencia</h2>
-      <p><strong>Práctica</strong> – Desarrollo de Aplicativo mediante Php, Mysql y ApiTrello.</p>
-      <p><strong>Desarrollador y Encargado de Operaciones, Empresa Neogistica</strong> Encargado de desarrollo, mantención y documentación de aplicaciones y servivodores</p>
-      <p><strong>Desarrollador, Empresa INO</strong> – Desarrollo de nuevos modulos para la aplicación movil de INO.</p>
-    </div>
+         <div class="text-center glass-card">
+         <p><strong>Práctica</strong> – Desarrollo de Aplicativo mediante Php, Mysql y ApiTrello.</p>
+         <p><strong>Desarrollador y Encargado de Operaciones, Empresa Neogistica</strong> Encargado de desarrollo, mantención y documentación de aplicaciones y servivodores</p>
+         <p><strong>Desarrollador, Empresa INO</strong> – Desarrollo de nuevos modulos para la aplicación movil de INO.</p>
+        </div>
+      </div>
 
     <!-- Pie de página -->
     <footer class="text-center mt-5">
-      <small>&copy; 2025 Tu Nombre. Todos los derechos reservados.</small>
+      <small>&copy; 2025 Felipe Ignacio Orellana Henríquez. Todos los derechos reservados.</small>
     </footer>
   </div>
 
