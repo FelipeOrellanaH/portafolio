@@ -27,9 +27,9 @@ Este repositorio contiene una recopilación de proyectos simples que demuestran 
 | Proyecto | Tecnología | Descripción |
 |---------|-------------|-------------|
 | [HTML-CV](./html-cv) | HTML, CSS | Una página web personal simple como CV online. |
-<!--| [Landing Page](./bootstrap-landing) | Bootstrap, HTML, CSS | Una página de inicio responsiva usando Bootstrap. |
+| Bootstrap, HTML, CSS | Una página de inicio responsiva usando Bootstrap. |
 | [Java Mini App](./java-mini-app) | Java | Aplicación de consola que gestiona productos. |
-| [MySQL Scripts](./mysql-ejemplos) | MySQL | Scripts de creación y consultas en una base de datos. |-->
+<!--| [MySQL Scripts](./mysql-ejemplos) | MySQL | Scripts de creación y consultas en una base de datos. |-->
 
 ## 📌 ¿Por qué este repositorio?
 
