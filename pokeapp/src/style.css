@@ -1,26 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');/* Importa la fuente retro "Press Start 2P" desde Google Fonts */
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff; /* Fondo blanco para todo el body */
-  margin: 0; /* Elimina márgenes predeterminados del body */
-  color: #000; /* Asegura que el texto sea visible */
+  font-family: 'Segoe UI', sans-serif; /* Fuente principal del texto, con 'sans-serif' como respaldo */
+  background-color: #ffffff; /* Color de fondo blanco si la imagen no carga */
+  background-image: url('images/fondo_pokeball.jpg'); /* Cambia esto por la ruta real de tu imagen */
+  background-size: cover; /* Ajusta para cubrir toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* No repite la imagen */
+  margin: 0; /* Elimina los márgenes por defecto del body */
+  color: #000; /* Establece el color del texto en negro */
+  background-attachment: fixed;
 }
 
 /* header con flex en fila horizontal */
 .header-title {
-  padding: 0.5rem 1rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem; /* 👉 Espacio entre header y navbar */
-  background-color: #c3cfa1 !important;
-  border: 3px solid #000000;
-  border-radius: 4px;
-  width: 100%;
-  text-align: center;
+  padding: 0.5rem 1rem; /* Espaciado interno: 0.5 rem arriba/abajo y 1 rem izquierda/derecha */
+  position: relative; /* Permite posicionamiento relativo de elementos hijos si es necesario */
+  display: flex; /* Usa Flexbox para alinear los elementos hijos */
+  justify-content: center; /* Centra los elementos hijos horizontalmente */
+  align-items: center; /* Centra los elementos hijos verticalmente */
+  gap: 1rem; /* Espacio entre los elementos hijos */
+  margin-bottom: 1rem; /* Espacio debajo del header respecto al siguiente elemento (ej: navbar) */
+  background-color: #c3cfa1 !important; /* Color de fondo verde claro, con !important para forzar su aplicación */
+  border: 3px solid #000000; /* Borde sólido negro de 3px */
+  border-radius: 4px; /* Esquinas ligeramente redondeadas */
+  width: 100%; /* Ocupa todo el ancho del contenedor padre */
+  text-align: center; /* Centra el texto dentro del header */
 }
 
 
@@ -28,10 +33,10 @@ body {
 
 /* Estilo retro para la barra de navegación */
 .navbar {
-  background-color: #c3cfa1; /* Fondo gris claro similar al de las cajas retro */
+  background-color: rgba(255, 255, 255, 0.85); /* Fondo gris claro similar al de las cajas retro */
   border: 3px solid #000000; /* Borde negro grueso */
   border-radius: 4px; /* Bordes redondeados */
-  
+  display: flex; /* Usa Flexbox para alinear los elementos hijos */
   margin-bottom: 1rem; /* Separación entre la barra y el contenido */
   width: 100%; /* Asegura que la barra ocupe todo el ancho disponible */
   padding: 0.5rem 1rem;
@@ -46,6 +51,7 @@ body {
   text-decoration: none; /* Elimina subrayado de los enlaces */
   display: inline-flex; /* Asegura que los elementos estén en línea */
   align-items: center; /* Alinea la imagen con el texto */
+  gap: 3rem; /* Espacio entre los elementos hijos */
 }
 
 .fondo_pokemon{
@@ -55,15 +61,15 @@ body {
 }
 
 /* Imagen de la Pokébola como separador */
-.navbar .nav-link::after {
+.navbar .nav-link::before {
   content: "";
   display: inline-block;
   background-image: url('images/pokeball.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 30px; /* Tamaño de la Pokébola */
-  height: 30px;
-  margin-left: 40px; /* Espacio entre el texto y la imagen */
+  width: 40px; /* Tamaño de la Pokébola */
+  height: 40px;
+  margin-left: 70px; /* Espacio entre el texto y la imagen */
 }
 
 /* Elimina la Pokébola después del último enlace */
@@ -72,7 +78,7 @@ body {
 }
 
 .nav-item{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 /* Estilo para los gifs */
@@ -81,37 +87,113 @@ body {
   width: auto;
 }
 
-/* Estilo retro para las cajas */
-.retro-box {
-  padding: 1rem;
-  background-color: #F4F4F4; /* Fondo blanco de la caja */
-  border: 3px solid #000000; /* Borde negro grueso */
-  border-radius: 4px; /* Bordes redondeados */
-  box-shadow: 0 0 10px 1px #000000; /* Sombra para darle profundidad */
-  margin-bottom: 1rem; /* Separación entre las cajas */
+.pokedex-buttons,
+.pokedex-main-button {
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+  margin-left: 0; /* Eliminar el margen izquierdo */
+  margin-top: 1rem; /* Mantener el margen superior */
 }
 
-/* Estilo para el texto */
+/* Contenedor para los diálogos, alineando todo en una fila */
+/* Asegurar que los márgenes y el padding no afecten el layout */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal del diálogo */
+.pokemon-dialogue-container {
+  display: flex; /* Flexbox para alineación horizontal */
+  align-items: center; /* Alinea los elementos verticalmente */
+  gap: 15px; /* Espacio entre la imagen y el texto */
+  margin-bottom: 1rem; /* Espacio entre los diálogos */
+  justify-content: start; /* Alineación de izquierda a derecha */
+}
+
+/* Imagen del Profesor Oak */
+.professor-icon {
+  background-image: url('images/profesor_oak.jpg'); /* Ruta de la imagen */
+  background-size: contain; /* Ajusta la imagen dentro del contenedor */
+  background-repeat: no-repeat; /* No repetir la imagen */
+  width: 100px; /* Tamaño de la imagen */
+  height: 100px; /* Tamaño de la imagen */
+  flex-shrink: 0; /* Evita que la imagen se reduzca */
+  display: inline-block; /* Mantenemos la imagen en línea */
+  border: 2px solid #000;
+}
+
+/* Estilo del texto del diálogo */
+.pokemon-dialogue {
+  font-family: 'PokemonGB', monospace;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #000;
+  background-color: #fff;
+  padding: 12px;
+  border: 2px solid #000;
+  width: 100%;              /* Ocupa todo el ancho del contenedor padre */
+  max-width: none;          /* Quita la limitación de 300px */
+  line-height: 1.4;
+  box-sizing: border-box;   /* Incluye padding en el cálculo del ancho */
+}
+
+/* Estilo del texto del diálogo */
+.pokemon-dialogue-static {
+  font-family: 'PokemonGB', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #000;
+  background-color: #fff;
+  padding: 12px;
+  border: 2px solid #000;
+  width: 100%;              /* Ocupa todo el ancho del contenedor padre */
+  max-width: none;          /* Quita la limitación de 300px */
+  line-height: 1.4;
+  box-sizing: border-box;   /* Incluye padding en el cálculo del ancho */
+}
+
+
+/* Estilo del texto del diálogo */
+.little_pokemon-dialogue {
+  font-family: 'PokemonGB', monospace;
+  font-size: 8px;
+  color: #000;
+  background-color: #fff;
+  height: 35px;
+}
+
+/* Estilo de la sección de la galería */
+#gallery {
+  padding: 2rem 0; /* Espaciado superior e inferior */
+}
+
+#gallery2 {
+  padding: 2rem 0; /* Espaciado superior e inferior */
+}
+
+/* Asegurarse de que el contenedor de la galería tenga un espaciado adecuado */
+.container {
+  padding: 0 15px; /* Padding para los márgenes laterales */
+  width: 100%;
+  max-width: 1200px; /* Controla el ancho máximo de la galería */
+  margin: 0 auto; /* Centra el contenido */
+}
+
 .poketext {
   font-family: 'Press Start 2P', cursive;
-  color: #FFCB05; /* Amarillo Pokémon */
-  text-shadow: 2px 2px 0 #3B4CCA, 4px 4px 0 #2A75BB; /* Sombras tipo logo */
-  font-size: 1.25rem; /* Aumento de tamaño para el texto */
+  color: #FFCB05;
+  text-shadow: 2px 2px 0 #3B4CCA, 4px 4px 0 #2A75BB;
+  font-size: 1.25rem;
   letter-spacing: 1px;
-  
+  text-align: center; /* Centra el título */
 }
 
-/* Eliminamos la barra divisoria entre el título y el index */
-.pokedex-divider {
-  display: none; /* Oculta la barra divisoria */
-}
 
-/* Efecto pixelado para el borde de la barra divisoria */
-.pokedex-divider.effect {
-  font-family: 'Press Start 2P', cursive;
-  letter-spacing: 1px;
-  font-size: 0.75rem;
-}
 
 /* Animación (si deseas mantener el efecto de brillo retro) */
 @keyframes border-glow {
@@ -128,19 +210,6 @@ body {
   src: url('fonts/pokemon_gb.ttf') format('truetype');
 }
 
-.pokemon-dialogue {
-  font-family: 'PokemonGB', monospace;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #000;
-  background-color: #fff;
-  padding: 12px;
-  border: 2px solid #000;
-  width: 100%;              /* Ocupa todo el ancho del contenedor padre */
-  max-width: none;          /* Quita la limitación de 300px */
-  line-height: 1.4;
-  box-sizing: border-box;   /* Incluye padding en el cálculo del ancho */
-}
 .titletext{
   font-size: 35px;
 }
@@ -155,7 +224,13 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items:flex-start;
+  margin-bottom: 2rem;
+  height: 650px; /* se ajusta al contenido */
+  min-height: 100%; /* aseguramos que tenga al menos toda la altura de los hijos */
+  position: relative;
+  overflow: hidden; /* <- IMPORTANTE: evita que el contenido se "escape" */
+
 }
 
 .pokedex-screen {
@@ -163,20 +238,35 @@ body {
   border: 4px inset #000;
   border-radius: 10px;
   padding: 1rem;
-  width: 50%;
+  width: 350px;
+  height: 500px;
   text-align: center;
+  margin-top: 3rem;
+  margin-right: 0;
 }
+
+
 
 .pokemon-image {
   width: 100%;
-  max-width: 150px;
-}
+  max-width: 300px;
+  margin-top: 50px;
 
+}
+/* Barra de búsqueda (derecha) */
 .search-bar {
   width: 45%;
+  height: 400px;
+  min-height: 400px; /* Altura más baja para la parte derecha */
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start; /* Asegura que los botones se alineen arriba */
+  gap: 1rem;
+  margin-left: 0;
+  margin-top: 0;
+  /* Eliminamos el margin-top para evitar que la parte derecha se mueva hacia abajo */
 }
 
 .input-group {
@@ -202,15 +292,33 @@ body {
 .pokedex-buttons {
   display: flex;
   gap: 10px;
-  margin-bottom: 1rem;
+  z-index: 2;
+  margin-left: 6rem;  /* más margen a la izquierda */
+  margin-top: 1rem;     /* más margen arriba */
+}
+
+.pokedex-main-button {
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+  margin-left: 6rem;  /* más margen a la izquierda */
+  margin-top: 1rem;     /* más margen arriba */
+}
+
+.pokedex-main-button div {
+  width: 40px; /* 👉 más grandes */
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #333;
 }
 
 .pokedex-buttons div {
-  width: 20px;
+  width: 20px; /* 👉 más grandes */
   height: 20px;
   border-radius: 50%;
-  border: 2px solid #000;
-  box-shadow: 2px 2px 0 #333;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #333;
 }
 
 .btn-red {
@@ -224,4 +332,121 @@ body {
 .btn-yellow {
   background-color: #fbc02d;
 }
+
+.btn-light-blue{
+    background-color: #Add8e6;
+}
+
+
+.button-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: -11px;
+}
+
+.grid-row {
+  display: flex;
+  gap: 0;
+}
+
+.grid-button {
+  
+  width: 60px;
+  height: 60px;
+  background-color: #ADD8E6; /* Celeste */
+  border:2px solid #87CEEB; /* Azul claro */
+  border-radius: 35%;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 0 0 4px #000;
+}
+
+.button-grid-2 {
+  margin-left: -191px; /* Esto mueve la fila de botones más a la izquierda */
+}
+
+.button-grid-3 {
+  margin-left: 240px; /* Esto mueve la fila de botones más a la izquierda */
+  margin-top: -68px;
+}
+
+.grid-button-2 {
+  
+  width: 60px;
+  height: 60px;
+  background-color: #f8f8f8; /* blanco */
+  border: 2px solid #9c9c9c; /* plomo */
+  border-radius: 35%;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 0 0 4px #000;
+}
+
+.grid-button-3 {
+  
+  width: 60px;
+  height: 60px;
+  background-color: #434343; /* negro claro */
+  border: 2px solid #141414; /* negro oscuro */
+  
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 0 0 4px #000;
+}
+
+.grid-button-4 {
+  
+  width: 60px;
+  height: 60px;
+  background-color: #1f1f1f; /* negro claro */
+  border: 2px solid #1f1f1f; /* negro oscuro */
+
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
+  cursor: pointer;
+  
+}
+
+
+.grid-divider {
+  height: 4px;
+  width: 100%;
+  background-color: #87CEEB; /* Azul claro */
+  margin: 0.25rem 0;
+  cursor: pointer;
+}
+
+.btn-invisible {
+  width: 60px;
+  height: 60px;
+  background: none;
+  border: none;
+  color: transparent;
+}
+
+
+.pokedex-divider {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  transform: translateX(-50%);
+  background-color: #000;
+  border-left: 2px solid #555;
+  border-right: 2px solid #555;
+  z-index: 1;
+  
+} 
+  
+
 

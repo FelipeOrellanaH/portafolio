@@ -28,3 +28,37 @@
     }
   }
 
+
+
+
+
+
+
+  /*Funcionalidad maquina de escribir*/
+  document.addEventListener("DOMContentLoaded", () => {
+    const dialogues = document.querySelectorAll(".pokemon-dialogue");
+  
+    dialogues.forEach((element) => {
+      const fullText = element.textContent;
+      let index = 0;
+  
+      function typeWriter() {
+        element.textContent = "";
+        index = 0;
+  
+        const interval = setInterval(() => {
+          if (index < fullText.length) {
+            element.textContent += fullText.charAt(index);
+            index++;
+          } else {
+            clearInterval(interval);
+            setTimeout(typeWriter, 10000); // reinicio cada 10s
+          }
+        }, 30);
+      }
+  
+      typeWriter();
+    });
+  });
+  
+  

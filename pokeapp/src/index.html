@@ -17,8 +17,7 @@
     <img src="images/gbc.gif" alt="Game Boy Color" class="gbc-gif">
   </header>
   
-  <!-- Línea divisoria con efecto -->
-  <div class="pokedex-divider"></div>
+
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -38,33 +37,143 @@
   </nav>
   
 
-  <!-- HERO / HOME -->
-  <section id="home" class="bg-light text-center py-5">
-    <div class="container">
-      <h1 class="display-4 poketext">¡Bienvenido a la Pokédex de la Primera Generación!</h1>
-      <p class="lead pokemon-dialogue">Explora, aprende y descubre a los Pokémon clásicos de Kanto.</p>
+  <section id="gallery" >
+    <div class="container fondo_pokemon" >
+        <h2 class="text-center mb-4 mt-4 poketext">¡Bienvenido!</h2>
+  <div class="pokemon-dialogue-container ">
+    <span class="professor-icon"></span> <!-- Imagen Profesor Oak -->
+    <p class="lead pokemon-dialogue">Explora, aprende y descubre a los Pokémon clásicos de Kanto.</p>
+  </div>
+     </div>
+
+  
+  <section id="gallery2" >
+    <div class="container fondo_pokemon">
+      <h2 class="text-center mb-4 mt-4 poketext">Pokédex De Kanto (1ra Generación)</h2>
+      <div class="pokemon-dialogue-container">
+        <span class="professor-icon "></span> <!-- Imagen Profesor Oak -->
+        <p class="lead pokemon-dialogue">
+          Aquí podrás buscar cualquiera de los 151 Pokémon de la primera generación.
+        </p>
+      </div>
     </div>
+       <!-- Pokedex Container -->
+       <section id="pokedex-container" class="d-flex align-items-start position-relative py-5 mt-4">
+  
+    <div class="pokedex-main-button position-absolute top-0 start-0 mt-1 ms-2">
+      <div class="btn-light-blue"></div>
+    </div>
+    <!-- Botones FUERA de la pantalla, arriba a la izquierda del marco rojo -->
+    <div class="pokedex-buttons position-absolute top-0 start-0 mt-1 ms-6">
+      
+      <div class="btn-red"></div>
+      <div class="btn-blue"></div>
+      <div class="btn-yellow"></div>
+    </div>
+  
+    <!-- Pantalla de la Pokédex (izquierda) -->
+    <div class="pokedex-screen">
+      <img id="pokemon-image" src="images/default-image.png" alt="Pokémon Image" class="pokemon-image">
+      <h3 id="pokemon-name" class="poketext">Nombre Pokémon</h3>
+      <p id="pokemon-type" class="poketext">Tipo: -</p>
+    </div>
+    
+  <!-- División con bisagra -->
+<div class="pokedex-divider"></div>
+
+<!-- Barra de búsqueda (derecha) -->
+<div class="search-bar">
+  
+  <!-- Tablero de botones -->
+  <div class="button-grid mt-4">
+    <div class="grid-row">
+      <button class="grid-button-4"></button>
+      <button class="grid-button-4"></button>
+      <button class="grid-button-4"></button>
+      <button class="grid-button-4"></button>
+      <button class="grid-button-4"></button>
+    </div>
+    <div class="grid-row">
+      <button class="grid-button-4"></button>
+      <button class="grid-button-4"></button>
+      <button class="grid-button-4"></button>
+      <button class="grid-button-4"></button>
+      <button class="grid-button-4"></button>
+    </div>
+  </div>
+  <div class="input-group">
+    <input type="text" id="pokemonInput" class="form-control pokemon-dialogue-static" placeholder="Buscar Pokémon">
+    <button class="btn btn-primary little_pokemon-dialogue" onclick="buscarPokemon()">Buscar</button>
+  </div>
+
+  <!-- Tablero de botones -->
+  <div class="button-grid mt-4">
+    <div class="grid-row">
+      <button class="grid-button"></button>
+      <button class="grid-button"></button>
+      <button class="grid-button"></button>
+      <button class="grid-button"></button>
+      <button class="grid-button"></button>
+    </div>
+    <div class="grid-row">
+      <button class="grid-button"></button>
+      <button class="grid-button"></button>
+      <button class="grid-button"></button>
+      <button class="grid-button"></button>
+      <button class="grid-button"></button>
+    </div>
+  </div>
+
+  <div class="button-grid-2 ">
+    <div class="grid-row">
+      <button class="grid-button-2"></button>
+      <button class="grid-button-2"></button>
+  </div>
+  
+
+</div>
+<div class="pokedex-main-button button-grid-3">
+<div class="btn-yellow"></div>
+</div>
+
+<div class="button-grid-2 ms-5">
+  <div class="grid-row">
+    <button class="grid-button-3"></button>
+    <button class="grid-button-3"></button>
+    <button  class="btn-invisible">1</button>
+    <button  class="btn-invisible">2</button>
+    <button class="grid-button-3"></button>
+    <button class="grid-button-3"></button>
+    
+</div>
+
+
   </section>
 
   <!-- ACERCA DE -->
-  <section id="about" class=" py-5 fondo_pokemon ">
-    <div class="container ">
-      <h2 class="text-center mb-4 poketext">Acerca de Nosotros</h2>
-      <p class="pokemon-dialogue">
-        Creado por Felipe Orellana, fan de pokemon, apasionado por la tecnología y amante de la primera generación. Por toda la nostalgia que evoca esa epoca.</p>
-    <p class="pokemon-dialogue">Esta página ha sido desarrollada como una herramienta educativa, visual e interactiva que demuestra el uso de tecnologías web modernas como HTML, CSS, JavaScript y Bootstrap.</p> 
-        
+<!-- ACERCA DE -->
+<section id="about" class="py-4 fondo_pokemon">
+  <div class="container">
+    <h2 class="text-center mb-4 poketext">Acerca de Nosotros</h2>
 
-    </div>
-  </section>
-
- <!-- DESCRIPCIÓN / GALERÍA -->
-<section id="gallery" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-4 poketext">Pokédex Kanto (1ra Generación)</h2>
-      <p class="text-center mb-4 pokemon-dialogue">
-        Aquí podrás buscar cualquiera de los 151 Pokémon de la primera generación.
+    <!-- Primer diálogo con imagen al lado del texto -->
+    <div class="pokemon-dialogue-container">
+      <span class="professor-icon"></span> <!-- Imagen Profesor Oak -->
+      <p class="lead pokemon-dialogue">
+        Creado por Felipe Orellana, fan de pokemon, apasionado por la tecnología y amante de la primera generación. Por toda la nostalgia que evoca esa época.
       </p>
+    </div>
+
+    <!-- Segundo diálogo con imagen al lado del texto -->
+    <div class="pokemon-dialogue-container">
+      <span class="professor-icon"></span> <!-- Imagen Profesor Oak -->
+      <p class="pokemon-dialogue">
+        Esta página ha sido desarrollada como una herramienta educativa, visual e interactiva que demuestra el uso de tecnologías web modernas como HTML, CSS, JavaScript y Bootstrap.
+      </p>
+    </div>
+  </div>
+</section>
+
 
     </div>
       <!-- Galería dinámica -->
@@ -74,29 +183,8 @@
     </div>
   </section>
 
-  <!-- Pokedex Container -->
-<section id="pokedex-container" class="d-flex justify-content-between align-items-center py-5">
-    <!-- Pantalla de la Pokédex (izquierda) -->
-    <div class="pokedex-screen">
-      <img id="pokemon-image" src="images/default-image.png" alt="Pokémon Image" class="pokemon-image">
-      <h3 id="pokemon-name" class="poketext">Nombre Pokémon</h3>
-      <p id="pokemon-type" class="poketext">Tipo: -</p> <!-- 👈 Este faltaba -->
-    </div>
+
   
-    <!-- Barra de búsqueda (derecha) -->
-    <div class="search-bar">
-        <!-- Dentro de .search-bar -->
-            <div class="pokedex-buttons mb-3">
-            <div class="btn-red"></div>
-            <div class="btn-blue"></div>
-            <div class="btn-yellow"></div>
-  </div>
-      <div class="input-group">
-        <input type="text" id="pokemonInput" class="form-control" placeholder="Buscar Pokémon">
-        <button class="btn btn-primary" onclick="buscarPokemon()">Buscar</button>
-      </div>
-    </div>
-  </section>
   
 
   <script src="app.js"></script>
