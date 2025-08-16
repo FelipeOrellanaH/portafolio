@@ -22,6 +22,10 @@ Este portafolio contiene una recopilación de proyectos simples que demuestran e
 - **Base de Datos MySQL**  
   Creación de esquemas, consultas SQL (SELECT, INSERT, JOIN), relaciones y normalización básica.
 
+- **Micro Servicios**  
+  Diseño e implementación de aplicaciones modulares bajo arquitectura de microservicios, utilizando Spring Boot y APIs REST. Experiencia en comunicación entre servicios, independencia de bases de datos y despliegue en contenedores Docker.
+
+
 ## 📁 Proyectos Incluidos
 
 | Proyecto | Tecnología | Descripción |
