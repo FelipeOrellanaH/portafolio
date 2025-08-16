@@ -28,7 +28,6 @@ Este portafolio contiene una recopilación de proyectos simples que demuestran e
 |---------|-------------|-------------|
 | [HTML-CV](./html-cv) | HTML, CSS | Una página web personal simple como CV online. |
 | Bootstrap, HTML, CSS | Una página de inicio responsiva usando Bootstrap. |
-| [PokeApp - API](./pokeapp) | Java | Aplicación de consola que gestiona productos. |
 <!--| [MySQL Scripts](./mysql-ejemplos) | MySQL | Scripts de creación y consultas en una base de datos. |-->
 
 ## 📌 ¿Por qué este repositorio?
