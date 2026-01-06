@@ -59,4 +59,40 @@ body {
   color: #ddd; /* color más claro al pasar el mouse */
 }
 
+.logo-html{
+  width: 100px;      /* ensancha la imagen */
+  height: 100px;  /*mantiene proporcion */
+}
+
+.logo-java{
+  width: 100px;      /* ensancha la imagen */
+  height: 100px;  /*mantiene proporcion */
+}
+
+.logo-css{
+  width: 100px;      /* ensancha la imagen */
+  height: 100px;  /*mantiene proporcion */
+}
+
+
+.logo-mysql{
+  width: 100px;      /* ensancha la imagen */
+  height: 100px;  /*mantiene proporcion */
+}
+
+.logo-bootstrap{
+  width: 100px;      /* ensancha la imagen */
+  height: 100px;  /*mantiene proporcion */
+}
+
+.logo-git{
+  width: 100px;      /* ensancha la imagen */
+  height: 100px;  /*mantiene proporcion */
+}
+
+.logo-aws{
+  width: 150px;      /* ensancha la imagen */
+  height: 100px;  /*mantiene proporcion */
+}
+
   
