@@ -1,5 +1,5 @@
-# portafolio
-Este repositorio contiene una recopilación de proyectos simples que demuestran el uso de distintas tecnologías que manejo actualmente.
+# Bienvenido a mi Portafolio digital
+Este portafolio contiene una recopilación de proyectos simples que demuestran el uso de distintas tecnologías que manejo.
 
 
 ## 🧠 Habilidades Técnicas
@@ -22,13 +22,16 @@ Este repositorio contiene una recopilación de proyectos simples que demuestran 
 - **Base de Datos MySQL**  
   Creación de esquemas, consultas SQL (SELECT, INSERT, JOIN), relaciones y normalización básica.
 
+- **Micro Servicios**  
+  Diseño e implementación de aplicaciones modulares bajo arquitectura de microservicios, utilizando Spring Boot y APIs REST. Experiencia en comunicación entre servicios, independencia de bases de datos y despliegue en contenedores Docker.
+
+
 ## 📁 Proyectos Incluidos
 
 | Proyecto | Tecnología | Descripción |
 |---------|-------------|-------------|
 | [HTML-CV](./html-cv) | HTML, CSS | Una página web personal simple como CV online. |
 | Bootstrap, HTML, CSS | Una página de inicio responsiva usando Bootstrap. |
-| [PokeApp - API](./pokeapp) | Java | Aplicación de consola que gestiona productos. |
 <!--| [MySQL Scripts](./mysql-ejemplos) | MySQL | Scripts de creación y consultas en una base de datos. |-->
 
 ## 📌 ¿Por qué este repositorio?
